@@ -1,0 +1,105 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desat-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    color: var(--dark-gray);
+}
+
+p {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.bold-text {
+    color: var(--very-dark-desat-blue);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.small-text {
+    font-size: 0.875rem;
+    /* will use the default font color */
+}
+
+.bg-top {
+    width: 1024px;
+    position: absolute;
+    left: calc(55% - 1024px);
+    top: calc(45% - 1024px);
+}
+
+.bg-bottom {
+    width: 1024px;
+    position: absolute;
+    right: calc(55% - 1024px);
+    bottom: calc(45% - 1024px);
+}
+
+/* change background image sizes for small screens */
+@media screen and (max-width: 400px) {
+    .bg-top {
+        width: 640px;
+        position: absolute;
+        left: calc(60% - 640px);
+        top: calc(45% - 640px);
+    }
+    
+    .bg-bottom {
+        width: 640px;
+        position: absolute;
+        right: calc(60% - 640px);
+        bottom: calc(45% - 640px);
+    }
+  }
+
+
+.profile-card {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    width: min(350px, 100% - 50px); /* adjusts for small screens */                   
+    height: 375px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url('/images/bg-pattern-card.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.profile-pic {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid white;
+    left: 50%;
+    transform: translate(-50%, 88px);
+}
+
+.profile-details {
+    position: absolute;
+    top: 215px;
+    width: 100%
+}
+
+.age {
+    margin-left: 0.5em;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid var(--dark-gray);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.attribution { font-size: 11px; text-align: center; color: black;}
+.attribution a { color: hsl(228, 45%, 44%); }
